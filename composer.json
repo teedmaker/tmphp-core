@@ -7,7 +7,12 @@
             "name": "tadeubarbosa",
             "email": "tadeufbarbosa@gmail.com"
         }
-    ],
+	],
+	"autoload": {
+		"files": [
+			"core/App/Start.php"
+		]
+	},
     "require": {
 		"vlucas/phpdotenv": "^2.4"
 	}
