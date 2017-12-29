@@ -1,0 +1,12 @@
+{
+    "name": "teedmaker/tmphp-core",
+    "description": "Core do Framework tmphp",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "tadeubarbosa",
+            "email": "tadeufbarbosa@gmail.com"
+        }
+    ],
+    "require": {}
+}
