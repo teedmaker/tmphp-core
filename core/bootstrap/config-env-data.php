@@ -1,5 +1,4 @@
 <?php
 
-$dotenv = new Dotenv\Dotenv(__DIR__, BASE . '.env');
-
+$dotenv = new Dotenv\Dotenv(__DIR__, '../../../../../.env');
 $dotenv->load();
