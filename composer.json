@@ -11,7 +11,7 @@
 	"autoload": {
 		"files": [
 			"core/App/AutoLoadClass.php",
-			"core/App/Start.php"
+			"core/bootstrap/start.php"
 		]
 	},
     "require": {

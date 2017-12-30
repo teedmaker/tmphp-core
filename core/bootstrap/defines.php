@@ -21,17 +21,3 @@ define('BRANCH', $branch);
 $core = dirname(__FILE__, 2);
 $core = str_replace('\\', '/', $core) . '/';
 define('CORE', $core);
-
-###
-
-spl_autoload_register('AutoLoadClass::register');
-
-###
-
-$dotenv = new Dotenv\Dotenv(__DIR__, '../../../../../.env');
-$dotenv->load();
-
-##
-
-TMPHP\App\Brain::init();
-
