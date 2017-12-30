@@ -13,6 +13,7 @@ class AutoLoadClass
 		$core = preg_quote(CORE, '/');
 		$path = preg_match("/^{$core}/", $file)? CORE: BASE;
 
+		$class = str_replace('TMPHP\\', '', $class);
 		self::$class  = $class;
 		$class .= '.php';
 		self::$path  .= $path . $class;
