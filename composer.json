@@ -10,7 +10,6 @@
 	],
 	"autoload": {
 		"files": [
-			"core/App/AutoLoadClass.php",
 			"core/bootstrap/start.php"
 		]
 	},
