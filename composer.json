@@ -11,7 +11,10 @@
 	"autoload": {
 		"files": [
 			"core/bootstrap/start.php"
-		]
+		],
+		"psr-4": {
+			"TMPHP\\": "core/"
+		}
 	},
     "require": {
 		"vlucas/phpdotenv": "^2.4",
