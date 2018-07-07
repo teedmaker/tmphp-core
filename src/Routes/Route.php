@@ -62,11 +62,9 @@ class Route
     protected static function executeARoute(array $route, array $data=[]) {
         extract($route);
         if($method!==null) {
-            d($configs);
             return self::doMethod($method, $configs);
         }
         if(is_callable($callable)) {
-            s($configs);
             return call_user_func_array($callable, $data);
         }
         throw new Exception("The route don't have an controller or a callable function.", 1);
