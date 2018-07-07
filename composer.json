@@ -13,10 +13,10 @@
 			"core/bootstrap/start.php"
 		],
 		"psr-4": {
-			"TMPHP\\": "core/"
+			"TMPHP\\": "src/"
 		},
 		"classmap": [
-			"core/"
+			"src/"
 		]
 	},
     "require": {
