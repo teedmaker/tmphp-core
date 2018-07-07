@@ -1,6 +1,6 @@
 <?php
 
-$requestUri = $_SERVER['REDIRECT_URL'];
+$httpHost = $_SERVER['HTTP_HOST'];
 $phpSelf    = $_SERVER['PHP_SELF'];
 $phpSelf    = dirname($phpSelf, 2);
 
@@ -14,7 +14,7 @@ $rootPath       = dirname($scriptFileName, 2);
 $base = "{$rootPath}/";
 define('BASE', $base);
 
-$branch = str_replace("{$phpSelf}/", '', $requestUri);
+$branch = str_replace("{$phpSelf}/", '', $httpHost);
 $branch = trim($branch, '/');
 define('BRANCH', $branch);
 
