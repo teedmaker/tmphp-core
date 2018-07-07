@@ -10,10 +10,10 @@
 	],
 	"autoload": {
 		"files": [
-			"core/bootstrap/start.php"
+			"src/bootstrap/start.php"
 		],
 		"psr-4": {
-			"TMPHP\\": "src/"
+			"": "src/"
 		},
 		"classmap": [
 			"src/"
