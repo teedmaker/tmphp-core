@@ -13,10 +13,10 @@
 			"src/bootstrap/start.php"
 		],
 		"psr-4": {
-			"": "src/"
+			"TMPHP\\": "src/"
 		},
 		"classmap": [
-			"src/"
+			"src/Routes"
 		]
 	},
     "require": {
