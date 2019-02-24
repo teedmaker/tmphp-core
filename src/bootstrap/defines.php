@@ -4,12 +4,16 @@
 $method = strtolower($_SERVER['REQUEST_METHOD']);
 define('METHOD', $method);
 
+// define the scheme (http, https)
+$scheme   = (isset($_SERVER['HTTPS']) && 'on' === $_SERVER['HTTPS'])? 'https' : 'http';
+define('SCHEME', $scheme);
+
 // getting actual host
 $phpSelf  = dirname($_SERVER['PHP_SELF'], 2);
 $host     = "{$_SERVER['HTTP_HOST']}{$phpSelf}";
 $host     = str_replace('//', '/', $host);
 $host     = trim($host, '/');
-$host     = "{$_SERVER['REQUEST_SCHEME']}://{$host}/";
+$host     = SCHEME . "://{$host}/";
 define('HOST', $host);
 
 // getting path from general files
