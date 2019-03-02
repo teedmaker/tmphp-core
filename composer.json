@@ -16,7 +16,7 @@
 			"TMPHP\\": "src/"
 		},
 		"classmap": [
-			"src/Routes"
+            "src/Control"
 		]
 	},
     "require": {
