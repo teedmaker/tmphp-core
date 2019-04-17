@@ -17,7 +17,7 @@
 		},
 		"classmap": [
             "src/Core"
-		]
+        ]
 	},
     "require": {
 		"vlucas/phpdotenv": "^2.4",
