@@ -10,8 +10,7 @@
 	],
 	"autoload": {
 		"files": [
-			"src/bootstrap/start.php",
-            "src/Helpers/ClassToFunctions.php"
+			"src/bootstrap/start.php"
 		],
 		"psr-4": {
 			"TMPHP\\": "src/"
