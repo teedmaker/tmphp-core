@@ -1,6 +1,6 @@
 <?php
 
-require_once CORE . 'Control/Route.php';
+require_once CORE . 'Core/Route.php';
 
 $filesRoute = glob(BASE . 'app/routes/{*,**/*}.php', GLOB_BRACE);
 
