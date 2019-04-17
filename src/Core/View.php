@@ -5,9 +5,9 @@
  */
 class View
 {
-    private $path = '';
-    private $templateData = [];
-    private $viewData = [];
+    public $path = '';
+    public $templateData = [];
+    public $viewData = [];
 
     /**
      * Initialize View class
