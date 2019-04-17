@@ -6,7 +6,8 @@
 class View
 {
     private $path = '';
-    private $data = [];
+    private $templateData = [];
+    private $viewData = [];
 
     /**
      * Initialize View class
@@ -15,10 +16,10 @@ class View
      * @param array $data: the data to send to view
      * @return View
      */
-    public function __construct(string $path, array $data=[]) {
+    public function __construct(string $path, array $viewData=[]) {
         $path = str_replace('.', '/', $path);
         $this->path = $path;
-        $this->data = $data;
+        $this->viewData = $viewData;
         return $this;
     }
 
@@ -30,7 +31,7 @@ class View
      * @return View
      */
     public function with(string $name, $value) {
-        $this->data['view'][$name] = $value;
+        $this->viewData[$name] = $value;
         return $this;
     }
 
@@ -41,7 +42,7 @@ class View
      * @return void
      */
     public function title(string $title) {
-        $this->data['template']['title'] = $title;
+        $this->templateData['title'] = $title;
         return $this;
     }
 }
