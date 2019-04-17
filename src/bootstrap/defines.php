@@ -9,7 +9,8 @@ $phpSelf  = dirname($_SERVER['PHP_SELF'], 2);
 $host     = "{$_SERVER['HTTP_HOST']}{$phpSelf}";
 $host     = str_replace('//', '/', $host);
 $host     = trim($host, '/');
-$host     = "{$_SERVER['REQUEST_SCHEME']}://{$host}/";
+$requestScheme = $_SERVER['REQUEST_SCHEME'] ?? 'http';
+$host     = "{$requestScheme}://{$host}/";
 define('HOST', $host);
 
 // getting path from general files
