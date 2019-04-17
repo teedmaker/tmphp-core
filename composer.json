@@ -16,7 +16,7 @@
 			"TMPHP\\": "src/"
 		},
 		"classmap": [
-            "src/Control"
+            "src/Core"
 		]
 	},
     "require": {
