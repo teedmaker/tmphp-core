@@ -136,26 +136,27 @@ class Route
      * @return void
      */
     public static function group($firstArg, $secArg=null): void {
-        $data   = is_array($firstArg)?    $firstArg: [];
-        $method = is_callable($firstArg)? $firstArg: $secArg;
-        $prefix = $data['prefix'] ?? '';
-        //
-        if(!is_callable($method)) {
-            throw new Exception("No one method callable has been passed on group: `{$prefix}`.", 1);
-        }
-        self::$prefixForAGroup[] = $prefix;
-        self::$controllerForAGroup = $data['controller'] ?? self::$controllerForAGroup;
-        if(count($data)>1) {
-            self::$dataForAGroup = array_merge(self::$dataForAGroup, $data);
-            unset(self::$dataForAGroup['controller']);
-            unset(self::$dataForAGroup['prefix']);
-        }
-        $method();
-        array_pop(self::$prefixForAGroup);
-        if(empty(self::$prefixForAGroup)) {
-            self::$controllerForAGroup = null;
-            self::$dataForAGroup       = [];
-        }
+        new \Router\Group($firstArg, $secArg);
+        // $data   = is_array($firstArg)?    $firstArg: [];
+        // $method = is_callable($firstArg)? $firstArg: $secArg;
+        // $prefix = $data['prefix'] ?? '';
+        // //
+        // if(!is_callable($method)) {
+        //     throw new Exception("No one method callable has been passed on group: `{$prefix}`.", 1);
+        // }
+        // self::$prefixForAGroup[] = $prefix;
+        // self::$controllerForAGroup = $data['controller'] ?? self::$controllerForAGroup;
+        // if(count($data)>1) {
+        //     self::$dataForAGroup = array_merge(self::$dataForAGroup, $data);
+        //     unset(self::$dataForAGroup['controller']);
+        //     unset(self::$dataForAGroup['prefix']);
+        // }
+        // $method();
+        // array_pop(self::$prefixForAGroup);
+        // if(empty(self::$prefixForAGroup)) {
+        //     self::$controllerForAGroup = null;
+        //     self::$dataForAGroup       = [];
+        // }
     }
 
     public static function rule(string $name, string $regex) {
