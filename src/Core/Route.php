@@ -32,6 +32,8 @@ class Route
         $response     = null;
         $data         = [];
         foreach($routes as $url => $route) {
+            // removes first bar
+            $url = trim($url, '/');
             if($url==='/' or $barsInActual!==substr_count($url, '/')) {
                 continue;
             }
@@ -45,6 +47,9 @@ class Route
                 break;
             }
         }
+        if(is_null($response)) {
+            return self::getNotFound();
+        }
         self::executeARoute($response, $data);
     }
 
@@ -57,6 +62,11 @@ class Route
             $url   = str_ireplace("\{{$regex}\}", $value, $url);
         }
         return $url;
+    }
+
+    // configurate route not found
+    protected static function getNotFound() {
+        //
     }
 
     protected static function executeARoute(array $route, array $data=[]) {
